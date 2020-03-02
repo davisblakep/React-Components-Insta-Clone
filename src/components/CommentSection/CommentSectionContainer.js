@@ -7,7 +7,11 @@ import dummyData from "/Users/blakedavis/GitRepositories/React-Components-Insta-
 
 const CommentSection = props => {
   // Add state for the comments
-
+let commentItems = dummyData.map(x => {
+  x.comments.map(y => {
+    return y
+  })
+})
   return (
     <div>
       {/* map through the comments data and return the Comment component */}
@@ -16,7 +20,9 @@ const CommentSection = props => {
         x.comments.map(y => {
           return (<Comment comment={y}/>)
         }))
-      }
+      };
+      
+      
     </div>
   );
 };
