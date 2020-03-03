@@ -7,22 +7,8 @@ import dummyData from "/Users/blakedavis/GitRepositories/React-Components-Insta-
 
 const CommentSection = props => {
   // Add state for the comments
+const [commentInfo, setCommentInfo]=useState([]);
 
-const userInfo = dummyData.map(x => {
-  return x
-})
-
-const userCommentName = dummyData.map(x=>{
-  x.comments.map(y=>{
-    return y.username
-  })
-})
-
-const userCommentText = dummyData.map(x=>{
-  x.comments.map(y=>{
-    return y.text
-  })
-})
 
   return (
     <div>
@@ -36,25 +22,12 @@ const userCommentText = dummyData.map(x=>{
         }))
       };
 
-      {console.log(dummyData)}
+      {/* {console.log(dummyData)} */}
       
-      {/* {dummyData.map(x=>{
+      {/* {dummyData.map(x =>{
+        setCommentInfo(x);
         return(
-          <Comment comment={x.comments.map(y=>{
-            return(
-              props.y
-            )
-          })} />
-        )
-      })} */}
-
-      {/* {console.log(userInfo[0])}
-
-      {userInfo.forEach(x =>{
-        return(
-          <Comment comment={x.comments.map(y=>{
-            return props.y
-          })} />
+          <Comment comment={commentInfo.comment} />
         )
       })} */}
      
