@@ -29,7 +29,9 @@ const Post = props => {
         />
       </div>
       <LikeSection
-      likes={likes} />
+      likes={likes}
+      addLike = {(() => setLikes(likes + 1))} 
+      />
       <CommentSection
         postId={props.thumbnailUrl}
         comments={props.comments}
